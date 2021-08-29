@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -21,14 +22,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header() {
+export default function Header(props) {
   const classes = useStyles();
-
- const handleAdminLogin =()=>{
-     return({
-        
-     });
- }
 
   return (
     <div className={classes.root}>
@@ -40,7 +35,9 @@ export default function Header() {
           <Typography variant="h6" className={classes.title}>
             Service Booking App
           </Typography>
-          <Button onClick={handleAdminLogin} color="inherit">ADMIN LOGIN</Button>
+         <Link to="/authentication">
+         <Button variant="contained" color="primary">Admin Login</Button>
+         </Link>
         </Toolbar>
       </AppBar>
     </div>

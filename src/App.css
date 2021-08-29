@@ -16,6 +16,8 @@ strong {
 img {
   border-style: none;
 }
+a{
+  color: inherit; }
 button,
 input,
 optgroup,
@@ -77,17 +79,26 @@ body{
   margin: 0;
   padding: 0;
   width:100%;
-  overflow: hidden;
+  background: #b3d4fc;
+
 }
 .bg-img{
   width: 100%;
   max-height: fit-content;
 }
 .login-container{
+  border:0px solid red;
+  width: 100%;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items:center;
 }
+.login-fileds input[type='input']{
+  padding: 5px 5px 5px 5px;
+}
+
 
 
 

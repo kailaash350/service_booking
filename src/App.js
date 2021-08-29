@@ -1,14 +1,19 @@
-import './App.css';
-import Header from './Components/Header';
-import { Login } from './Components/Login';
-import bgImage from '/Users/orion/Desktop/service_booking/src/images/backG_SrBK.png';
+import "./App.css";
+import Header from "./Components/Header";
+import Login from './Components/Login';
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
+import Navigation from "./Components/Navigation";
+
 function App() {
   return (
-    <div className="application-page">
-      <Header/>
-      <img className="bg-img" src={bgImage} alt="bg" />
-      <Login/>
-    </div>
+    <BrowserRouter>
+      <div className="application-page">
+        <Header/>
+        <Switch>
+          <Route path="/authentication" component={Login}/>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
