@@ -1,24 +1,31 @@
 import React from "react";
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 const Login = (props) => {
   return (
     <div className="login-container">
       <div className="login-fileds">
-      <label className="user" for="login-username">
-          <span className="hidden">Username</span>
-          </label>
-        <input type="text" className="login-inputfields" />
+        <TextField
+          required
+          id="outlined-required"
+          label="User Name"
+          value={""}
+          variant="outlined" name="userName"
+        />
       </div>
       <div className="login-fileds">
-      <label className="user" for="login-username">
-          <span className="hidden">Password</span>
-          </label>
-        <input type="password" className="login-inputfields" />
+        <TextField
+          required
+          id="outlined-required"
+          label="Password"
+          value={""}
+          variant="outlined" name="password"
+        />
       </div>
       <div className="login-fileds">
-        <button type="button-primary" className="login-button">
-          Login
-        </button>
+        <Button varient="contained" color="primary" className="login-button">
+          Login</Button>
       </div>
     </div>
   );
