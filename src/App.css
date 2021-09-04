@@ -95,7 +95,7 @@ body{
   justify-content: center;
   align-items:center;
 }
-.login-fileds{
+.login-fields{
   padding: 25px 5px 5px 5px;
 }
 .userFront-Container{
@@ -142,7 +142,39 @@ body{
   justify-content: center;
 }
 
-
-.form-field .select-car, input[type=text], .button-contact{
+.form-field .select-car, input[type=text], input[type=date] .button-contact{
   width: 30rem;
+}
+.service-container{
+  padding: 200px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+.logo-container{
+  padding-bottom: 20px;
+  border: 0px solid rgb(3, 2, 2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+flex-wrap: wrap;
+}
+.brand-name{
+display: flex;
+padding: 10px;
+cursor: pointer;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+font-weight: 500;
+border-radius: 5px ;
+}
+.brand-name:hover{
+  background-color: rgb(6, 147, 241);
+}
+.car-details{
+  padding: 50px;
+  border: 0px solid rgb(20, 231, 101);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+flex-wrap: wrap;
 }
