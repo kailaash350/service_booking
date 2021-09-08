@@ -2,10 +2,25 @@ import React from "react";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
+
+
+
 const Login = (props) => {
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    return(
+      props.history.push({
+        pathname:'/admin-dashboard',
+        state:""
+      })
+    )
+ 
+}
   return (
     <div className="login-container">
-      <div className="login-fileds">
+      <div className="login-fields">
         <TextField
           required
           id="outlined-required"
@@ -14,7 +29,7 @@ const Login = (props) => {
           variant="outlined" name="userName"
         />
       </div>
-      <div className="login-fileds">
+      <div className="login-fields">
         <TextField
           required
           id="outlined-required"
@@ -23,9 +38,9 @@ const Login = (props) => {
           variant="outlined" name="password"
         />
       </div>
-      <div className="login-fileds">
-        <Button varient="contained" color="primary" className="login-button">
-          Login</Button>
+      <div className="login-fields">
+        <Button onClick={handleSubmit} variant="contained" color="primary" className="login-button">
+          Login to check updates</Button >
       </div>
     </div>
   );

@@ -79,7 +79,7 @@ body{
   margin: 0;
   padding: 0;
   width:100%;
-  background: #b3d4fc;
+  background: #69a7f3;
 
 }
 .bg-img{
@@ -87,7 +87,6 @@ body{
   max-height: fit-content;
 }
 .login-container{
-  border:1px solid red;
   width: 100%;
   min-height: 500px;
   display: flex;
@@ -133,7 +132,6 @@ body{
 
 .contact-container{
   margin-top:150px;
-  border:0px solid rebeccapurple;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -147,34 +145,35 @@ body{
 }
 .service-container{
   padding: 200px;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
 }
 .logo-container{
   padding-bottom: 20px;
-  border: 0px solid rgb(3, 2, 2);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 flex-wrap: wrap;
 }
-.brand-name{
-display: flex;
-padding: 10px;
-cursor: pointer;
-font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-font-weight: 500;
-border-radius: 5px ;
-}
-.brand-name:hover{
-  background-color: rgb(6, 147, 241);
-}
+
 .car-details{
   padding: 50px;
-  border: 0px solid rgb(20, 231, 101);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 flex-wrap: wrap;
+}
+.date-picker{
+  padding: 16px;
+  background-color:rgba(255, 255, 255, 0);
+  border:1px solid #797979;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.63);
+}
+.admin-container{
+  border: 1px solid red;
+  padding:30px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly
 }

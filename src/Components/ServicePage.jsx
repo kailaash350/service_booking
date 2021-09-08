@@ -1,43 +1,89 @@
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button'
+import Select from '@material-ui/core/Select';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
 import CarList from './CarListConstant';
+import { makeStyles } from '@material-ui/core/styles';
+import Alert from '@material-ui/lab/Alert';
+
 
 export const ServicePage = () => {
 
+    const useStyles = makeStyles((theme) => ({
+        root: {
+          width: '100%',
+          display:'flex',
+          flexDirection:'row',
+          justifyContent:'space-evenly',
+         
+          '& > * + *': {
+            marginTop: theme.spacing(2),
+          },
+        },
+      }));
 
     const [startDate, setStartDate] = useState(new Date());
-    const [brand, setBrand] = useState("none");
+    const [state, setState] = React.useState({
+        brand: '',
+        displayAlert:false,
+    });
+    const handleChange = (event) => {
+        const name = event.target.name;
+        setState({
+            ...state,
+            [name]: event.target.value,
+        });
+    };
 
-    const handleBrand = (event) =>{
-         const br = document.getElementById('demo').getAttribute('data-value');
-         setBrand(br)
-        console.log(br);
-
-    }
-
+const handleSubmit = (e) =>{
+    setState({displayAlert:true})
+}
+const classes = useStyles();
     return (
+        <>
+        <div className={classes.root}>
+            {(state.displayAlert?          
+            <Alert severity="success" onClose={(displayAlert) => {setState(!displayAlert)}}>
+                You will get a confirmation message about your service soon</Alert>:
+                ""
+)
+
+            }
+             </div>
         <div className="service-container">
+             
             <div className="logo-container">
-                {
-                    CarList.map((cars, key) =>
 
-                        <div className="brand-name" id="demo" data-value={cars} key={key} onClick={handleBrand}>{cars}</div>
+                <Select
+                    required
+                    native
+                    value={state.brand}
+                    onChange={handleChange}
+                    variant="outlined"
+                    className="select-brand"
+                    inputProps={{
+                        name: 'brand',
+                        id: 'outlined-age-native-simple'
+                    }}
+                >
+                    <option aria-label="None" value="">Select Make</option>
+                    {
+                        CarList.map((cars, key) => {
+                            return (
+                                <option value={cars} key={key} >{cars}</option>
+                            )
+                        })
+                    }
 
-                    )
-                }
+                </Select>
 
             </div>
-            <div className="logo-container">
-                <p className="brand-select">Selected Car:{brand}</p>
-            </div>
+
             <div className="car-details">
                 <div className="login-fields">
                     <TextField
-                        required
                         id="outlined-required"
                         label="Model"
                         value={""}
@@ -63,17 +109,26 @@ export const ServicePage = () => {
                     />
                 </div>
                 <div className="login-fields">
-                    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                    <DatePicker className="date-picker" selected={startDate} onChange={(date) => setStartDate(date)} />
+                </div>
+                <div className="login-fields">
+                    <TextField
+                        required
+                        id="outlined-required"
+                        label="Name"
+                        value={""}
+                        variant="outlined" name="userName"
+                    />
                 </div>
 
             </div>
             <div className="car-details">
                 <div className="login-fields">
-                    <Button variant="contained" color="primary" className="login-button">
+                    <Button onClick={handleSubmit} variant="contained" color="primary" className="login-button">
                         Book Your Service</Button>
                 </div>
             </div>
-
         </div>
+        </>
     )
 }
