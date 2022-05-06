@@ -93,6 +93,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items:center;
+
 }
 .login-fields{
   padding: 25px 5px 5px 5px;
