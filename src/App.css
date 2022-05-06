@@ -63,23 +63,12 @@ fieldset {
    width: auto;
  }
 
- @media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
- }
 
 body{
   margin: 0;
   padding: 0;
   width:100%;
-  background: #69a7f3;
+  background: #2b82ee;
 
 }
 .bg-img{
@@ -143,6 +132,7 @@ body{
 
 .form-field .select-car, input[type=text], input[type=date] .button-contact{
   width: 30rem;
+  border:2px solid #000;
 }
 .service-container{
   padding: 200px;
@@ -172,7 +162,7 @@ flex-wrap: wrap;
   color: rgba(0, 0, 0, 0.63);
 }
 .admin-container{
-  border: 1px solid red;
+
   padding:30px;
   display: flex;
   flex-direction: row;
