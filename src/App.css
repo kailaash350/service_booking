@@ -68,7 +68,7 @@ body{
   margin: 0;
   padding: 0;
   width:100%;
-  background: #2b82ee;
+  background: #2f92f6;
 
 }
 .bg-img{
@@ -123,35 +123,28 @@ body{
 .contact-container{
   margin-top:150px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: column;
-  align-items: center;
-  align-content: stretch;
+  align-content: center;
   justify-content: center;
 }
 
-.form-field .select-car, input[type=text], input[type=date] .button-contact{
-  width: 30rem;
-  border:2px solid #000;
+.form-field, .select-car, input[type=text], input[type=date] .button-contact{
+  width: 20rem;
+  border:1px solid rgb(75, 75, 75);
 }
+
 .service-container{
-  padding: 200px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
-}
-.logo-container{
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-flex-wrap: wrap;
 }
 
 .car-details{
   padding: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
 flex-wrap: wrap;
 }
 .date-picker{

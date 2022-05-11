@@ -54,7 +54,7 @@ const classes = useStyles();
              </div>
         <div className="service-container">
              
-            <div className="logo-container">
+        <div className="car-details">
 
                 <Select
                     required
@@ -79,14 +79,14 @@ const classes = useStyles();
 
                 </Select>
 
-            </div>
+          
 
-            <div className="car-details">
+            
                 <div className="login-fields">
                     <TextField
                         id="outlined-required"
                         label="Model"
-                        value={""}
+                        value={state.model}
                         variant="outlined" name="userName"
                     />
                 </div>
@@ -95,7 +95,7 @@ const classes = useStyles();
                         required
                         id="outlined-required"
                         label="Registration Number"
-                        value={""}
+                        value={state.rego}
                         variant="outlined" name="userName"
                     />
                 </div>
@@ -104,7 +104,7 @@ const classes = useStyles();
                         required
                         id="outlined-required"
                         label="Phone Number"
-                        value={""}
+                        value={state.phone}
                         variant="outlined" name="userName"
                     />
                 </div>
@@ -116,7 +116,7 @@ const classes = useStyles();
                         required
                         id="outlined-required"
                         label="Name"
-                        value={""}
+                        value={state.name}
                         variant="outlined" name="userName"
                     />
                 </div>
