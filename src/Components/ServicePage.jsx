@@ -124,7 +124,7 @@ const classes = useStyles();
             </div>
             <div className="car-details">
                 <div className="login-fields">
-                    <Button onClick={handleSubmit} variant="contained" color="primary" className="login-button">
+                    <Button onClick={handleSubmit} variant="contained" color="secondary" className="login-button">
                         Book Your Service</Button>
                 </div>
             </div>
