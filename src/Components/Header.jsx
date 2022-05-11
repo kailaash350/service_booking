@@ -33,7 +33,7 @@ export default function Header(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Service Booking App
+            Service Booking Application
           </Typography>
          <Link to="/authentication">
          <Button variant="contained" color="primary">Admin Login</Button>

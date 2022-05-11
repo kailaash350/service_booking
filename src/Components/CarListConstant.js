@@ -11,6 +11,8 @@
                 "Mazda",
                 "Ford",
                 "KIA",
-                "Audi"
+                "Audi",
+                "Porche",
+                "Other"
 ];
 export default CarList;
